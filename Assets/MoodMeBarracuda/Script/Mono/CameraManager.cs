@@ -37,9 +37,12 @@ namespace MoodMe
                 Debug.Log("DEVICES LIST");
                 for (int cameraIndex = 0; cameraIndex < WebCamTexture.devices.Length; cameraIndex++)
                 {
-                    Debug.Log(cameraIndex + " name " + WebCamTexture.devices[cameraIndex].name + " isFrontFacing " + WebCamTexture.devices[cameraIndex].isFrontFacing);
+                    //if(WebCamTexture.devices[cameraIndex].isFrontFacing)
+                    Debug.Log(" camera index  : " + cameraIndex + " name  : " + WebCamTexture.devices[cameraIndex].name + " isFrontFacing : " + WebCamTexture.devices[cameraIndex].isFrontFacing);
                 }
                 DeviceIndex = (int)Mathf.Clamp(DeviceIndex, 0, WebCamTexture.devices.Length);
+                //DeviceIndex = 1;
+
                 if (DeviceIndex > WebCamTexture.devices.Length - 1)
                 {
                     DeviceIndex = WebCamTexture.devices.Length - 1;
